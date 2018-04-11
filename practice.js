@@ -18,7 +18,7 @@ function printRecursive(arr, i = 0) {
 printForward(arr);
 printRecursive(arr);
 
-//***********2 version********************
+//***********2 version with SLICE - it returns ARR!!!********************
 
 //return an ARRAY [1], [2]..
 function forwardPrintingWithSlice(arr, i = 0, j = 1) {
@@ -27,3 +27,11 @@ function forwardPrintingWithSlice(arr, i = 0, j = 1) {
   console.log(arr.slice(i, j));
   forwardPrintingWithSlice(arr, i + 1, j + 1);
 }
+
+function backwardPrintingWithSlice(arr, i = 0, j = 1) {
+  if (i === arr.length) return;
+
+  backwardPrintingWithSlice(arr, i + 1, j + 1);
+  console.log(arr.slice(i, j));
+}
+backwardPrintingWithSlice(arr);
