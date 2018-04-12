@@ -35,3 +35,24 @@ function backwardPrintingWithSlice(arr, i = 0, j = 1) {
   console.log(arr.slice(i, j));
 }
 backwardPrintingWithSlice(arr);
+
+//**********Binary Search Tree****************
+
+class BSTNode {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+let eight = new BSTNode(8);
+let five = new BSTNode(5);
+let two = new BSTNode(2);
+let six = new BSTNode(6);
+let twelve = new BSTNode(12);
+
+eight.left = five;
+eight.right = twelve;
+five.left = two;
+five.right = six;
