@@ -56,3 +56,20 @@ eight.left = five;
 eight.right = twelve;
 five.left = two;
 five.right = six;
+
+function InOrderTraversal(curr) {
+  let result = [];
+
+  function helper(curr) {
+    if (!curr) return;
+
+    helper(curr.left);
+    result.push(curr.value);
+    helper(curr.right);
+  }
+
+  helper(curr);
+  return result;
+}
+
+console.log(InOrderTraversal(eight));
